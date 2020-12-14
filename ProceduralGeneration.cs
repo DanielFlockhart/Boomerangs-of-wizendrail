@@ -32,15 +32,12 @@ public class ProceduralGeneration : MonoBehaviour
         createTileMap();
         
     }
-    // Update is called once per frame
     void Update()
     {
         CullTiles();
     }
     void createTileMap()
     {
-        //GameObject newTile = Instantiate(getShape(types[x]));
-        
         for (int x = 0; x < loaded; x++)
         {
             createSegment(types[x]);
@@ -67,12 +64,6 @@ public class ProceduralGeneration : MonoBehaviour
             manager.loaded_chunks += 1;
             createTiles();
         }
-        //if (Vector3.Distance(tiles[loaded-1].transform.position, Player.transform.position) < 5)
-        //{
-        //        Destroy(tiles[0]);
-        //        manager.loaded_chunks += 1;
-        //        createTiles();
-        //}
     }
     void createSegment(int typenum)
     {
@@ -97,153 +88,23 @@ public class ProceduralGeneration : MonoBehaviour
     }
     int get_piece(int type)
     {
-        // 0 = none
-        // 1 = |
-        // 2,3 = LEft right Turn
-        // 4 = -
-        // 9 = -
-        // 5,6,7,8 = up down left right turn
-        // 11,12 = 5,7 but reversed
-        if (type == 0)
-        {
-            return 1;// 1 or 2
-        } 
-        else if(type == 1)
-        {
-            return Random.Range(1, 4);// 3 or 4
-        }
-        else if(type == 2 || type == 3)
-        {
-            if(type == 2)
-            {
-                return 4;
-            } else
-            {
-                return 9;
-            }
-        }
-        else if(type == 4 || type == 9)
-        {
-            if(type == 4)
-            {
-                return Random.Range(5, 7);
-            } else
-            {
-                return Random.Range(7, 9);
-            }
-        }
-        else if(type == 5 ||  type == 7)
-        {
-            return 1;
-        }
-        else if(type == 6 || type == 8)
-        {
-            return 10;
-        }
-        else if(type == 10)
-        {
-            return Random.Range(11, 13);
-        }
-        else if(type == 11 || type == 12)
-        {
-            if(type == 11)
-            {
-                return 9;
-            } else
-            {
-                return 4;
-            }
-        }
-        else
-        {
-            return 1;
-        }
-        
+        // Code hidden due to its inefficiency
 
 
     }
     GameObject getShape(int indent)
     {
-        if(indent == 1 || indent == 0 || indent == 10)
-        {
-            return Straight;
-        }
-        else if (indent == 2)
-        {
-            return Left;
-        }
-        else if (indent == 3)
-        {
-            return Right;
-        }
-        else if (indent == 4 || indent == 9)
-        {
-            return StraightA;
-        }
-
-        else if (indent == 5)
-        {
-            return LeftUp;
-        }
-        else if (indent == 6)
-        {
-            return LeftDown;
-        }
-        else if(indent == 10)
-        {
-            return Straight;
-        }
-        else if (indent == 7)
-        {
-            return RightUp;
-        }
-        else if(indent == 11)
-        {
-            return LeftUp;
-        }
-        else if (indent == 12)
-        {
-            return RightUp;
-        }
-        else if (indent == 8)
-        {
-            return RightDown;
-        } else
-        {
-            return Straight;
-        }
+        // Code hidden due to its inefficiency
 
     }
-    float posChangeY(int fuck)
+    float posChangeY(int val)
     {
-        if (fuck == 1 || fuck == 2 || fuck == 3)
-        {
-            return 10;
-        }
-        else if (fuck == 10 || fuck == 11 || fuck == 12)
-        {
-            return -10;
-        }
-        else
-        {
-            return 0;
-        }
+        // Code hidden due to its inefficiency
     }
 
-    float posChangeX(int fuck)
+    float posChangeX(int val)
     {
-        if (fuck == 5 || fuck == 6 || fuck == 4)
-        {
-            return -10;
-        }
-        else if (fuck == 7 || fuck == 8 || fuck == 9)
-        {
-            return 10;
-        }
-        else
-        {
-            return 0;
-        }
+        // Code hidden due to its inefficiency
     }
 
 }
