@@ -13,17 +13,7 @@ public class Populate : MonoBehaviour
     public GameObject HealthPack;
     public GameObject BoostPack;
     public GameObject SpeedPack;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void PopulateSquare(float xlim,float ylim)
     {
         if (Random.Range(0, 11) < enemyChance)
