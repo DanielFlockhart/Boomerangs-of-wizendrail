@@ -42,8 +42,6 @@ public class Boomerang : MonoBehaviour
         }
 
     }
-    
-
 void get_event()
     {
         if (Input.GetMouseButtonDown(0))
@@ -82,29 +80,5 @@ void get_event()
             power = 0;
         }
     }
-    
-
-
-
-
-
-    void addRot()
-    {
-        //GameObject[] booms = GameObject.FindGameObjectsWithTag("Boomerang");
-        //foreach (GameObject boom in booms)
-        //{
-
-        //    if (boom.GetComponent<stats>().isRight == true)
-        //    {
-        //        boom.GetComponent<Rigidbody2D>().AddForce((transform.right * 5).normalized);
-        //    }
-        //    else
-        //    {
-        //        boom.GetComponent<Rigidbody2D>().AddForce((-transform.right * 5).normalized);
-
-        //    }
-        //}
-    }
-
 
 }
