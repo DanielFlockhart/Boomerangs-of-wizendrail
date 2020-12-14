@@ -26,10 +26,6 @@ public class EnemyScript : MonoBehaviour
 
     void Update()
     {
-        //Vector2 lookdir = new Vector2(target.position.x,target.position.y) - rb.position;
-        //float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg - 90f;
-        //rb.rotation = angle;
-
         reloadTime += Time.deltaTime;
         move();
         if(reloadTime >= timeToFire)
@@ -69,12 +65,10 @@ public class EnemyScript : MonoBehaviour
     }
     bool isDead()
     {
-        if(health <= 0)
-        {
+        if(health <= 0){
             return true;
         }
-        else
-        {
+        else{
             return false;
         }
     }
