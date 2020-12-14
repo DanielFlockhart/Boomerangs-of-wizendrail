@@ -9,24 +9,16 @@ public class Movement : MonoBehaviour
     private Vector2 moveDirection;
     public GameObject manager;
     Vector2 mousePos;
-    void Start()
-    {
-
-    }
 
     void Update()
     {
         ProcessInputs();
-        //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void FixedUpdate()
     {
 
         Move();
-        //Vector2 lookdir = mousePos - rb.position;
-        //float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg - 90f;
-        //rb.rotation = angle;
     }
 
     void ProcessInputs()
