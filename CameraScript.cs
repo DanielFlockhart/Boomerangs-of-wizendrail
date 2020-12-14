@@ -7,9 +7,7 @@ public class CameraScript : MonoBehaviour
     public Transform player;
     public Vector3 offset;
     public float smoothSpeed = 6f;
-    
-
-    // Update is called once per frame
+   
     void FixedUpdate()
     {
         Vector3 desiredPosition = player.position + offset;
