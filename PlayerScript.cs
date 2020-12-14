@@ -12,14 +12,7 @@ public class PlayerScript : MonoBehaviour
     float dubTime = 20f;
     float speedTime = 10f;
     public GameObject dubIndicator;
-    public GameObject speedIndicator;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public GameObject speedIndicator;e
     void Update()
     {
         if (isDead(health))
